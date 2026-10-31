@@ -1,0 +1,112 @@
+{
+  "$schema_note": "One row per product a searcher compares against Grok Bot. Every value carries the URL it was read from and the date it was read. `scripts/refresh.py` re-reads the machine-checkable fields (licence, archived, last push) from the GitHub API and prints what moved; it never writes a claim the source does not publish.",
+  "query": "grok bot alternative",
+  "built": "2026-10-31",
+  "columns": {
+    "isolation_unit": "What one agent/session gets on its own: a machine, a container, a process, or nothing (one shared machine).",
+    "hosting": "Where the agent's machine actually runs, in the vendor's own words.",
+    "self_hosted": "Whether the product can be run on infrastructure you control today.",
+    "review_gate": "What stands between an agent's change and production: a diff a person merges, an approval card, or nothing.",
+    "licence": "The repository's own licence, as GitHub reports it.",
+    "price_shape": "How the vendor charges, quoted from its pricing page where it publishes one."
+  },
+  "rows": [
+    {
+      "product": "Grok Bot",
+      "vendor": "xAI",
+      "isolation_unit": "per user, not per Bot",
+      "hosting": "Cursor-hosted cloud computers",
+      "self_hosted": false,
+      "review_gate": "approval card per proposed action",
+      "licence": "proprietary",
+      "price_shape": "$30/mo Premium, $100/mo Super, $200/mo Ultra; weekly usage pool shared with Grok and Cursor",
+      "sources": [
+        {"url": "https://x.ai/bot", "read": "2026-10-31", "quote": "Every Grok Bot shares one persistent cloud computer. Your Bots share that machine (files, browser, logins), so they can hand work off and keep context. Isolation is per user, not per Grok Bot."},
+        {"url": "https://docs.x.ai/grok-bot/security", "read": "2026-10-31", "quote": "Hosting Grok Bot runs only on Cursor-hosted cloud computers. On-premises deployment, deployment inside your own perimeter, and bring-your-own-image deployment are not supported today."},
+        {"url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy", "read": "2026-10-31", "quote": "An approval controls the proposed action. It does not reverse work already completed."}
+      ]
+    },
+    {
+      "product": "Kortix",
+      "vendor": "Kortix",
+      "isolation_unit": "per session",
+      "hosting": "Kortix Cloud, your own VPC, or your own on-prem network",
+      "self_hosted": true,
+      "review_gate": "session work reaches main through a change request; merge is default-deny for agents",
+      "licence": "open source (see the repository)",
+      "price_shape": "100 credits per dollar; $50 buys 5,000 credits; the sandbox is billed per second while it runs",
+      "sources": [
+        {"url": "https://kortix.com/security", "read": "2026-10-31", "quote": "Every session runs isolated. / One cloud computer per session / Its own branch of the repository / Nothing shared with another session"},
+        {"url": "https://kortix.com/pricing", "read": "2026-10-31", "quote": "100 credits per dollar"},
+        {"url": "https://github.com/kortix-ai/suna", "read": "2026-10-31", "quote": "agents, skills and memory as files in a git repository you own"}
+      ]
+    },
+    {
+      "product": "Rakazo",
+      "vendor": "elie222",
+      "isolation_unit": "shared team computers plus isolated private computers",
+      "hosting": "self-hosted (Docker, E2B, Daytona, CreateOS, Boat, or a local computer)",
+      "self_hosted": true,
+      "review_gate": "per-computer approval rules",
+      "licence": "Apache-2.0",
+      "price_shape": "no published price; the cost is the host and models you run",
+      "sources": [
+        {"url": "https://github.com/elie222/rakazo", "read": "2026-10-31", "quote": "Open-source Grok Bot alternative. Choose your own model"}
+      ]
+    },
+    {
+      "product": "OpenMausBot",
+      "vendor": "milind-soni",
+      "isolation_unit": "one cloud computer per bot",
+      "hosting": "self-hosted app, or the vendor's hosted Starter plan",
+      "self_hosted": true,
+      "review_gate": "per-bot settings; no team merge gate",
+      "licence": "Apache-2.0",
+      "price_shape": "self-hosted free; hosted Starter $15/mo with 100 computer-hours a month",
+      "sources": [
+        {"url": "https://github.com/milind-soni/OpenMausBot", "read": "2026-10-31", "quote": "Open-source Grok Bot alternative with a virtual machine that ..."},
+        {"url": "https://www.openmausbot.com/pricing", "read": "2026-10-31", "quote": "Starter plan at $15 per month"}
+      ]
+    },
+    {
+      "product": "OpenClaw",
+      "vendor": "openclaw",
+      "isolation_unit": "one gateway process; personal or shared team deployment",
+      "hosting": "your own computer",
+      "self_hosted": true,
+      "review_gate": "none by default",
+      "licence": "MIT",
+      "price_shape": "no paid tier, hosted service or token",
+      "sources": [
+        {"url": "https://github.com/openclaw/openclaw", "read": "2026-10-31", "quote": "The AI that really does things. Any OS. Any Platform."}
+      ]
+    },
+    {
+      "product": "Hermes Agent",
+      "vendor": "Nous Research",
+      "isolation_unit": "one agent process",
+      "hosting": "your own machine or server",
+      "self_hosted": true,
+      "review_gate": "skill writes staged for the operator's approval",
+      "licence": "MIT",
+      "price_shape": "no published price; model cost only",
+      "sources": [
+        {"url": "https://github.com/NousResearch/hermes-agent", "read": "2026-10-31", "quote": "The agent that grows with you"},
+        {"url": "https://www.reddit.com/r/opencode/comments/1wyvamh/grok_bot_alternative/", "read": "2026-10-31", "quote": "Hermes is the best alternative right now."}
+      ]
+    },
+    {
+      "product": "OpenHands",
+      "vendor": "OpenHands",
+      "isolation_unit": "one container per conversation",
+      "hosting": "local Docker or the vendor's cloud",
+      "self_hosted": true,
+      "review_gate": "a diff in your own repository",
+      "licence": "MIT",
+      "price_shape": "open source; the cloud plan meters model and compute",
+      "sources": [
+        {"url": "https://github.com/OpenHands/OpenHands", "read": "2026-10-31", "quote": "OpenHands: AI-Driven Development"}
+      ]
+    }
+  ]
+}
