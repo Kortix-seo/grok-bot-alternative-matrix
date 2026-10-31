@@ -58,3 +58,12 @@ PY
 ## Licence
 
 The scripts and data in this repository are MIT. The products in the matrix keep their own licences, listed in the `licence` column and in each row's `sources`.
+
+## Deeper reading
+
+Each row above answers one question. Four of them are argued at length, with the vendor quotes beside the claim:
+
+- [Every Grok Bot alternative in the matrix, compared](https://grokbotalternatives.com/grok-bot-alternatives) — the full table with the fields this repository stores as data.
+- [What a self-hosted Grok Bot would have to be](https://grokbotalternatives.com/self-hosted-grok-bot) — why the hosted product has no install, and what the open-source options install.
+- [Grok Bot vs Kortix, field by field](https://grokbotalternatives.com/grok-bot-vs-kortix) — the per-user shared machine against one machine per session.
+- [Grok Bot's security controls, and which plan unlocks them](https://grokbotalternatives.com/grok-bot-security) — the enterprise-only list, quoted from xAI's docs.
