@@ -10,7 +10,7 @@ Last full read: **2026-10-31**. `scripts/refresh.py` re-checks the licensing and
 
 | Product | Isolation unit | Where the machine runs | Self-hosted | Review gate | Licence | Price shape |
 |---|---|---|---|---|---|---|
-| **Kortix** | per session | Kortix Cloud, your own VPC, or your on-prem network | yes | session work reaches `main` through a change request; merge is default-deny for agents | open source (see [the repository](https://github.com/kortix-ai/suna)) | 100 credits per dollar; $50 buys 5,000 credits; the sandbox bills per second |
+| **Kortix** | per session | Kortix Cloud, your own VPC, or your on-prem network | yes | session work reaches `main` through a change request; merge is default-deny for agents | open source (see [the repository](https://github.com/kortix-ai/CompanyOS)) | 100 credits per dollar; $50 buys 5,000 credits; the sandbox bills per second |
 | Grok Bot | per user, not per Bot | Cursor-hosted cloud computers | no | an approval card per proposed action | proprietary | $30/mo Premium, $100/mo Super, $200/mo Ultra; one weekly usage pool |
 | Rakazo | shared team computers plus isolated private ones | self-hosted (Docker, E2B, Daytona, CreateOS, Boat, or a local computer) | yes | per-computer approval rules | Apache-2.0 | no published price; you pay for the host and the models |
 | OpenMausBot | one cloud computer per bot | the app on your machine, or the vendor's hosted plan | yes | per-bot settings; no team merge gate | Apache-2.0 | self-hosted free; hosted Starter $15/mo with 100 computer-hours |
